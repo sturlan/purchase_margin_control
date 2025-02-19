@@ -1,6 +1,6 @@
 {
     'name': 'Purchase Margin Control',
-    'version': '17.0.1.0.1',
+    'version': '17.0.1.0.2',
     'category': 'Purchase',
     'summary': 'Add margin control to purchase order lines',
     'description': """
