@@ -15,20 +15,4 @@
             </xpath>
         </field>
     </record>
-
-    <record id="view_margin_wizard_form" model="ir.ui.view">
-        <field name="name">apply.margin.wizard.form</field>
-        <field name="model">apply.margin.wizard</field>
-        <field name="arch" type="xml">
-            <form string="Apply Margin to All Lines">
-                <group>
-                    <field name="margin_percentage"/>
-                </group>
-                <footer>
-                    <button name="apply_margin" string="Apply" type="object" class="btn-primary"/>
-                    <button string="Cancel" class="btn-secondary" special="cancel"/>
-                </footer>
-            </form>
-        </field>
-    </record>
 </odoo> 
