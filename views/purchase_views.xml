@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="purchase_order_form_inherit_margin" model="ir.ui.view">
+        <field name="name">purchase.order.form.inherit.margin</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/tree//field[@name='price_unit']" position="after">
+                <field name="margin_percentage"/>
+                <field name="sales_price"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/form//field[@name='price_unit']" position="after">
+                <field name="margin_percentage"/>
+                <field name="sales_price"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_margin_wizard_form" model="ir.ui.view">
+        <field name="name">apply.margin.wizard.form</field>
+        <field name="model">apply.margin.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Apply Margin to All Lines">
+                <group>
+                    <field name="margin_percentage"/>
+                </group>
+                <footer>
+                    <button name="apply_margin" string="Apply" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo> 
